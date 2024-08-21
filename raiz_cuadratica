@@ -1,0 +1,40 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+   float a,b,c,d,x1,x2;
+   
+    cout<<"ingrese el valor de a: ";
+    cin>>a;
+   
+   if (a=0)
+		cout<<"esta operacion no se puede realizar si a toma el valor de 0";
+	else{
+		cout<<"ingrese el valor de b: ";
+		cin>>b;
+		cout<<"ingrese el valor de c: ";
+		cin>>c;
+		d=(b*b)-(4*a*c);
+		if (d=0){
+			x1=b/(2*a);
+			cout<<"solo existe una solucion, es x= "<<x1;
+		}
+		else{
+			if (d>0){
+				x1=(-b+(sqrt(d)))/(2*a);
+				x2=(-b-(sqrt(d)))/(2*a);
+				cout<<"existen dos soluciones, x1= "<<x1<<" y, x2= "<<x2;
+			}
+			else{
+				x1=-b/(2*a);
+				x2=sqrt(-d)/(2*a);
+				cout<<"la solucion es: "<<x1<<"+"<<x2<<"i";
+			}
+		}
+	}
+
+    return 0;
+}
