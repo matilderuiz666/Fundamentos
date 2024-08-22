@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float P;
+    cout << "Ingrese el peso de la carta, por favor: ";
+    cin >> P;
+
+    if(P > 0 && P <= 50) {
+        cout<<"El precio es: 1.50"<<"bs";
+    } 
+    else{
+        if(P > 50 && P <= 100) {
+        cout<<"El precio es: 4.00"<<"bs";
+        } 
+        else{
+            if(P > 100 && P <= 200) {
+                cout<<"El precio es: 6.00"<<"bs";
+            } 
+            else{
+                if(P > 200 && P <= 350) {
+                    cout<<"El precio es: 10.50"<<"bs";
+                } 
+                else{
+                    if(P > 350 && P <= 500) {
+                        cout<<"El precio es: 15.00"<<"bs";
+                    } 
+                    else{
+                        if(P > 500) {
+                            cout<<"NO SE PUEDE ENVIAR COMO CARTA";
+                        } 
+                        else{
+                            cout << "El peso ingresado no es válido.";
+                        }
+                    }
+                }
+            }
+        }
+    }
+                
+
+    return 0;
+}
