@@ -1,0 +1,61 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main ()
+{
+  int hrinicial,mininicial,seginicial,hrfinal,minfinal,segfinal,difhr,difmin,difseg;
+  cout<<"ingresa horas, minutos y segundos en formato 24hrs"<<endl;
+  cout<<"Ingresa la hora inicial: "<<endl;
+  cout<<"Hora:";
+  cin>>hrinicial;
+  if(hrinicial>23 || hrinicial<0 ){
+    cout<<"La hora esta fuera del limite de 24hrs.";
+    return 1;
+  }
+  cout<<"Minutos:";
+  cin>>mininicial;
+  if(mininicial>59 || mininicial<0){
+    cout<<"Los minutos estan fuera del limite de 24hrs.";
+    return 1;
+  }
+  cout<<"Segundos:";
+  cin>>seginicial;
+  if(seginicial>59 || seginicial<0){
+    cout<<"Los segundos estan fuera del limite de 24hrs.";
+    return 1;
+  }
+  cout<<"Ingrese la hora final: "<<endl;
+  cout<<"Hora:";
+  cin>>hrfinal;
+  if(hrfinal>23 || hrfinal<0){
+    cout<<"la hora no esta fuera del limite de 24hrs.";
+    return 1;
+  }
+  cout<<"Minutos:";
+  cin>>minfinal;
+  if(minfinal>59 || minfinal<0){
+    cout<<"Los minutos estan fuera del limite de 24hrs.";
+    return 1;
+  }
+  cout<<"Segundos:";
+  cin>>segfinal;
+  if(segfinal>59 || segfinal<0){
+    cout<<"Los segundos estan fuera del limite de 24hrs.";
+    return 1;
+  }
+  difhr=hrinicial-hrfinal;
+  difmin=mininicial-minfinal;
+  difseg=seginicial-segfinal;
+  if(hrinicial<hrfinal)
+    difhr=-difhr;
+  if(mininicial<minfinal)
+    difmin=-difmin;
+  if(seginicial<segfinal)
+    difseg=-difseg;
+  cout<<"Hora inicial: "<<hrinicial<<"Hr "<<mininicial<<"Min "<<seginicial<<"Seg "<<endl;
+  cout<<"Hora final: "<<hrfinal<<"Hr "<<minfinal<<"Min "<<segfinal<<"Seg "<<endl;
+  cout<<"Diferncia: "<<difhr<<"Hr "<<difmin<<"Min "<<difseg<<"Seg "<<endl;
+  
+  return 0;
+ 
+}
