@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int cont=1, acumulador=0, lim;
+    //validar datos
+    do{
+        cout<<"ingrese la cantidad de numeros que quiere sumar: ";
+        cin>>lim;
+        
+        if (lim<=0 || lim>50){
+            cout<<"este valor no es aceptado"<<endl;
+            cout<<"-----ingrese otro numero-----"<<endl;
+        }
+        
+    }while(lim<=0 || lim>50);
+    
+    while (cont<=lim){
+        acumulador+=cont;
+        cont+=1;
+    }
+    
+    cout<<"la suma de los "<<lim<<" primeros numeros es: "<<acumulador;
+    
+    return 0;
+}
