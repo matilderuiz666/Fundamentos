@@ -1,0 +1,90 @@
+//Matilde Ruiz
+
+#include <iostream>
+#include <string>
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+    
+    int opcion;
+    float D, C, A, V, r, p;
+    float H, S, precio;
+    string N;
+    int hora, min, seg, horah;
+    
+    do{
+        cout<<"----------MENU----------"<<endl;
+		cout<<"1. area y volumen de la circunferencia"<<endl;
+		cout<<"2. calcular salario neto"<<endl;
+		cout<<"3. convertir hora de 24h a 12h"<<endl;
+		cout<<"0. salir"<<endl;
+		
+		cout<<"ingrese su opcion: ";
+		cin>>opcion; 
+		
+		switch (opcion){
+		    case 1:
+		    {
+                cout<<"ingrese el valor del Diametro en cm: ";
+                cin>>D;
+            
+                p=M_PI;
+                r=(D/2.0);
+                 
+                 C=(p)*D;
+                cout<<"La Circuferencia de la esfera es: "<<C<<"cm"<<endl;
+                 A=4.0*(p)*pow(r,2);
+                cout<<"El Area de la esfera es: "<<A<<"cm2"<<endl;
+                 V=(4.0/3.0)*(p)*pow(r,3);
+                cout<<"El Volumen de la esfera es: "<<V<<"cm3"<<endl;
+                break;
+		    }
+		    case 2:
+		    {
+                cout<<"ingrese nombre: ";
+                cin>>N;
+                cout<<"ingrese horas de trabajo: ";
+                cin>>H;
+                cout<<"ingrese horas x precio: ";
+                cin>>precio;
+                S= H*precio;
+                
+                if(S>=8272){
+                    S=S*0.87;
+                    cout<<"el salario es: "<<S<<endl;
+                }
+                else{
+                    cout<<"el salario es: "<<S<<endl;
+            	}
+            		break;
+		    }
+            case 3:
+            {
+                cout<<"ingrese la hora en formato de 24h: ";    cin>>hora;
+                cout<<"ingrese los minutos de la hora que ingreso: ";    cin>>min;
+                cout<<"ingrese los segundos de la hora que ingreso: ";    cin>>seg;
+                horah = hora-12;
+                cout<<"la hora que ingresó en formato de 24h fue: "<<hora<<":"<<min<<":"<<seg<<". La hora en formato de 12h es: ";
+                if(hora>=12){
+                    cout<<horah<<":"<<min<<":"<<seg<<"PM";  
+                }
+                else{
+                    cout<<horah<<":"<<min<<":"<<seg<<"PM";
+                }
+                break;
+            }
+            case 0:
+            {
+                cout<<"salir";
+                break;
+            }
+            default:
+                cout<<"esta opcion no esta habilitada"<<endl;
+		}
+    }while (opcion!=0);
+    
+    return 0;
+}
