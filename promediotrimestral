@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int sup,cont,inf,ig,sema,trime,prom,sum;
+    cont = 1;
+    prom =0;
+    sum = 0;
+	inf = 0;
+	sup = 0;
+	ig = 0;
+	
+	while(cont<=12){
+	    cout<<"ingrese el promedio de la semana ("<<cont<<"): ";
+		cin>>sema;
+		sum+=sema;
+		cont+=1;
+	}
+	
+	prom = sum/12;
+	
+	cout<<"el promedio del trimestre es: "<<prom<<endl;
+	
+	cont=1;
+	
+	do{
+		cout<<"ingrese nuevamente el promedio de la semana ("<<cont<<"): ";
+		cin>>sema;
+		if (sema<prom){
+			inf=inf +1;
+			cout<<"este dia fue inferior al promedio trimestral"<<endl;
+		}
+		else{
+			if (sema>prom){
+				sup = sup + 1;
+				cout<<"este dia fue superior al promedio trimestral"<<endl;
+			}
+			else{ 
+				ig = ig + 1;
+				cout<<"este fia fue igual al promedio trimestral"<<endl;
+			}
+		}
+		cont = cont + 1;
+	}while(cont<=12);
+	cout<<"los dias que el promedio semanal fue inferior al promedio trimestral fueron: "<< inf<<endl;
+	cout<<"los dias que el promedio semanal fue igual al promedio trimestral fueron: "<<ig<<endl;
+	cout<<"los dias que el promedio semanal fue superior al promedio trimestral fueron: "<< sup<<endl;
+
+    return 0;
+}
