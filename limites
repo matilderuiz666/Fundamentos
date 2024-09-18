@@ -1,0 +1,34 @@
+#include <iostream>
+#include <limits>                                   //mayor -> menor valor
+using namespace std;                                //menor -> mayor valor
+
+int main()
+{
+    float suma,promedio;
+    int mayor = numeric_limits<int>::min(); 
+    int menor = numeric_limits<int>::max(); //numeric_limits<double>::min();    se cambia el tipo de dato de acuerdo a lo necesario
+    int numero, N;
+    
+    do{
+        cout<<"ingresar el numero de elementos: ";
+        cin>>N;
+    }while (N<=0);
+    
+    for (int i=0;i<N;i++){
+        cout<<"ingresar un numero "<<i+1<<" : ";
+        cin>>numero;
+        suma += numero;
+        if (numero>mayor){
+            mayor = numero;    
+        }
+        if (numero<menor){   //no se usa else porque son mayor y menos son variables diferentes, no estan relacionadas
+            menor = numero;
+        }
+    }
+    
+    cout<<"el promedio es: "<<static_cast<double>(suma)/N<<endl;   //static_cast<float>(suma)      cambia el tipo de la variable
+    cout<<"el mayor es: "<<mayor<<endl;
+    cout<<"el menor es: "<<menor<<endl;
+    
+    return 0;
+}
