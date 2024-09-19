@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int cantidad,numero,resto,rest=1;
+    int cantidad,numero,resto=1,rest;
     int mayor = numeric_limits<int>::min(); 
     int menor = numeric_limits<int>::max();
     do{
@@ -22,13 +22,14 @@ int main()
             menor = numero;
         }
     }
-    while(rest!=0){
+    while(resto!=0){
         resto=mayor%menor;
-        mayor=resto;
-        rest=menor%mayor;
-        cout<<rest;
+        rest=resto;
+        mayor=menor;
+        menor=resto;
+        
     }
-    cout<<"el MCD es: "<<resto;
-    
+    cout<<"el MCD es: "<<mayor;
+
     return 0;
 }
