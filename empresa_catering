@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    
+    float per,total;
+    
+    do{
+        cout<<"ingrese a cantidad de personas para las cuales necesita el servicio: ";
+        cin>>per;
+    }while (per<0);
+    total=50*per;
+    cout<<"el servicio total para "<<per<<" personas es de: "<<total;
+    
+    return 0;
+}
