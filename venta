@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int pre;
+    float desc,total;
+    
+    do{
+        cout<<"ingrese el precio de su producto: ";
+        cin>>pre;
+    }while (pre<0);
+    
+    if (pre>100){
+        desc=pre*0.15;
+        cout<<desc<<endl;
+        total=pre-desc;
+    }
+    else{
+        total=pre;
+    }
+    
+    cout<<"el precio final es: "<<total;
+    
+    return 0;
+}
