@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int anho,vehiculo;
+    do{
+    cout<<"ingrese el vehiculo que ocupa (1.coche) (2.moto): ";
+    cin>>vehiculo;
+    }while (vehiculo<1 || vehiculo>2);
+    do{
+        cout<<"ingrese el tiempo que lleva con su vehiculo en anhos: ";
+        cin>>anho;
+    }while  (anho<0);
+    if (vehiculo==1){
+        if (anho>5){
+            cout<<"el deducible es de 200bs";
+        }
+        else{
+            cout<<"el deducible es de 300bs";
+        }
+    }
+    if(vehiculo==2){
+        cout<<"el deducible es de 400bs";
+    }
+    
+    return 0;
+}
