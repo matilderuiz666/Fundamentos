@@ -3,25 +3,35 @@
 
 using namespace std;
 
+//el prototipo de la funcion
+bool palindromo(string palabra);
+
 int main()
 {
-    int longitud;  //debe ser entera para que pueda utilizarse como queremos
+    bool espalindromo;
     string palabra;
-    bool espalindromo=1;  //por defecto la palabra no es palindromo
     
     cout<<"introduzca la palabra: ";
     getline(cin,palabra);   //pide valor del teclado para la variable palabra
-    longitud=palabra.length();
-    for (int i=0;i<longitud/2;i++){  //dividido 2 para que no vuelva a repetir innecesariamente
-        if (palabra.at(i)!=palabra.at(longitud -i -1)){
-            espalindromo=0;
-            break;
-        }
-    }
+    espalindromo=palindromo(palabra);
     if (espalindromo)
         cout<<"es palindromo";
     else
         cout<<"no es palindromo";
+}
+
+//podemos hacer una funcion y no usarla
+//declarar la funcion
+bool palindromo(string palabra){
     
-    return 0;
+    int longitud;  //debe ser entera para que pueda utilizarse como queremos
+    
+    longitud=palabra.length();
+    for (int i=0;i<longitud/2;i++){  //dividido 2 para que no vuelva a repetir innecesariamente
+        if (palabra.at(i)!=palabra.at(longitud -i -1)){
+            return false;
+        }
+    }
+    return true;
+    
 }
