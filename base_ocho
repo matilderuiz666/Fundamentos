@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int numero, digito;
+    bool base = true;
+    cout << "ingrese un numero: ";  
+    cin >> numero;
+    
+    while (numero > 0) {
+        digito = numero % 10;
+        numero /= 10;
+        if (digito < 0 || digito>7) {
+            base = false;
+            break;
+        }
+    }
+    if (base)
+        cout << "el numero esta en base ocho";
+    else
+        cout << "el numero no esta en base ocho";
+}
