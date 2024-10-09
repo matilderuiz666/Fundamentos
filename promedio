@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int N, acum = 0, mayor = 0, menor = 0;
-    float num;
+    int N;
+    float num, mayor = 0, menor = 0, acum = 0;     //si un numero contiene a otro, tienen que ser del mismo tipo, de lo contrario de ser flotante lo cambiarà a entero
     do {
         cout << "ingrese la cantidad de numeros que desea ingresar: ";
         cin >> N;
