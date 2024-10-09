@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int N, acum = 0, mayor = 0, menor = 0;
+    float num;
+    do {
+        cout << "ingrese la cantidad de numeros que desea ingresar: ";
+        cin >> N;
+    } while (N <= 0);
+    cout << "ingrese el numero: ";
+    cin >> num;
+    mayor = num;
+    menor = num;
+    acum = num;
+
+    for (int i = 2; i <= N; i++) {
+        cout << "ingrese un numero: ";
+        cin >> num;
+        if (menor > num)
+            menor = num;
+        if (mayor < num)
+            mayor = num;
+        acum += num;
+    }
+    cout << "el promedio es: " << acum / N << endl;
+    cout << "el mayor es: " << mayor << endl;
+    cout << "el menor es: " << menor << endl;
+    cout << "la diferencia entre el mayor y menor es: " << mayor - menor;
+
+    return 0;
+}
