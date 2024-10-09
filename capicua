@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+
+	string num;
+	int longitud,d1,d2;
+
+	cout << "ingrese el numero: ";
+	getline(cin, num);
+
+	longitud = num.length();
+
+	for (int i=0;i<longitud/2;i++) {
+		d1 = num.at(i) - '0';	//- '0' para que devuelva entero
+		d2 = num.at(longitud - i - 1) - '0';
+		cout << "la diferencia entre " << d1 << " y " << d2 << " es: " << abs(d1 - d2) << endl;		//saca valor absoluto
+	}
+
+	return 0;
+}
