@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int cant,menorn,mayorn;
+	float producto, may, menor, total=0, prom;
+	do {
+		cout << "Ingrese la cantidad de productos: ";
+		cin >> cant;
+	} while (cant <= 0);
+	cout << "Ingrese la cantiadd de oructos para " << cant << " articulos:" << endl;
+	for (int i = 1; i <= cant; i++) {
+		do {
+			cout << "Producto " << i << ":" << endl;
+			cin >> producto;
+		} while (producto <= 0);
+		if (i == 1) {
+			may = producto;
+			menor = producto;
+			menorn = i;
+			mayorn = i;
+		}
+		if (producto < menor) {
+			menor = producto;
+			menorn = i;
+		}
+		if (producto > mayor) {
+			may = producto;
+			mayorn = i;
+		}
+		total += producto;
+		prom = total / cant;
+		}
+	cout << "Total de productos en ivnetario: " << total << endl;
+	cout << "Mayor cantidad: " << may<<" del producto "<<mayorn << endl;
+	cout << "menor cantidad: " << menor << " del producto " << menorn << endl;
+	cout << "Promedio de productos: " << prom << endl;
+	}
