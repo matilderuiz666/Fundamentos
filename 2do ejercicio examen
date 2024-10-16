@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int venta, cant;
+    float total;
+    do {
+        cout << "ingrese cantidad de trabajadores: ";
+        cin >> cant;
+        if (cant <= 0)
+            cout << "El numero ingresa debe ser mayor a cero" << endl;
+    } while (cant <= 0);
+    for (int i = 1; i <= cant; i++) {
+        int comision = 0;
+        do {
+            cout << "ingrese ventas de este mes: ";
+            cin >> venta;
+            if (venta <= 0)
+                cout << "El numero ingresa debe ser mayor a cero" << endl;
+        } while (venta <= 0);
+
+        if (venta >= 10000 && venta <= 50000) {
+            comision = venta * 0.05;
+        }
+        else
+            if (venta > 50000) {
+                comision = venta * 0.08;
+            }
+        total = venta + comision;
+        cout << "El monto total a pagar es de: " << total << endl;
+    }
+    return 0;
+}
