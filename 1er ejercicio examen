@@ -1,0 +1,26 @@
+#include <iostream>
+#include "math.h" //pow solo funciona con base flotante
+
+using namespace std;
+
+int main()
+{
+	int n, suma=0;
+	float x;
+
+	do {
+		cout << "ingrese la base constante x: ";
+		cin >> x;
+	} while (x == 0);
+	do {
+		cout << "ingrese el limite de veces (exponente n): ";
+		cin >> n;
+	} while (n <= 0);
+
+	for (int i = 0; i < n; i++) {
+		suma += pow(x, i + 1);
+	}
+
+	cout << "la suma es: " << suma;
+	
+}
