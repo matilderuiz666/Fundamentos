@@ -1,0 +1,31 @@
+#include <iostream>
+#define MAX 100
+
+using namespace std;
+
+int main()
+{
+    int num[MAX],n;
+    
+    cout<<"ingrese la cantidad de numeros que desea ingresar: ";
+    cin>>n;
+    
+    for(int i=0;i<n;i++){
+        cout<<"ingrese el numero ("<<i+1<<") : ";
+        cin>>num[i];
+    }
+    int aux;
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(num[i]>num[j]){
+                aux=num[i];
+                num[i]=num[j];
+                num[j]=aux;
+            }
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<"el numero invertido es: "<<num[i];
+    }
+    return 0;
+}
