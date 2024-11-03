@@ -45,7 +45,7 @@ void burbujaall(string vec[], int tel[], int n) {
     int auxnum;
     for (int i = 0; i < n-1; i++) {
         for (int j = i+1; j < n; j++) {
-            if (vec[j] < vec[i])
+            if (vec[j] < vec[i]){
                 auxnom = vec[j];
                 vec[j] = vec[i];
                 vec[i] = auxnom;
@@ -53,6 +53,7 @@ void burbujaall(string vec[], int tel[], int n) {
                 auxnum = tel[j];
                 tel[j] = tel[i];
                 tel[i] = auxnum;
+            }
         }
     }
     
