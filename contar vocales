@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#define MAX 100
+
+using namespace std;
+
+int contarvocales(string frase, int longitud);
+
+int main()
+{
+    string frase;
+    cout << "ingrese una frase: ";
+    getline(cin, frase);
+
+    int lon = frase.length();
+    
+    cout << "la cantidad de vocales es: " << contarvocales(frase,lon);
+    
+    return 0;
+}
+
+int contarvocales(string frase, int longitud) {
+    int vocal = 0;
+    for (int i = 0; i < longitud; i++) {
+        if (frase[i] == 'a' || frase[i] == 'e' || frase[i] == 'i' || frase[i] == 'o' || frase[i] == 'u' || frase[i] == 'A' || frase[i] == 'E' || frase[i] == 'I' || frase[i] == 'O' || frase[i] == 'U')
+            vocal++;
+    }
+    return vocal;
+}
