@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n, sum = 0,i=1;
+	do {
+		cout << "ingrese el numero hasta el cual desea sumar: ";
+		cin >> n;
+	} while (n < 0);
+	while (i <= n) {
+		sum += i;
+		i++;
+	}
+	cout << "la suma desde 1 hasta "<<n<<" es: " << sum;
+}
