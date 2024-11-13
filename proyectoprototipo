@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void mostrarTabla(int dia, int mes, int año, int hora, int minuto, string actividad) {
+    // Títulos de las columnas
+    cout << "Fecha      | Hora   | Actividad" << endl;
+    cout << "---------------------------------" << endl;
+    
+    // Imprimir los datos tabulados
+    cout << dia << "/" << mes << "/" << año << "   | " 
+         << hora << ":" << minuto << "  | " 
+         << actividad << endl;
+}
+
+int main() {
+    int dia = 29, mes = 4, año = 2024;
+    int hora = 13, minuto = 30;
+    string actividad = "Almuerzo";
+    
+    mostrarTabla(dia, mes, año, hora, minuto, actividad);
+    
+    return 0;
+}
